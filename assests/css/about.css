@@ -1,0 +1,148 @@
+/* about section starts */
+.about {
+    background: rgb(255, 255, 255);
+    min-height: 100%;
+  
+  }
+  .about .row {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 10rem;
+  }
+  .about .row .image {
+    float: left;
+    text-align: auto;
+    flex: 1 1 35rem;
+  }
+  .about .row .image img {
+    float: left;
+    margin: 4rem;
+    width: 20rem;
+    height: auto;
+    border-radius: 5%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+    mix-blend-mode:normal;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  /* Define the keyframes for the rotation animation */
+/* @keyframes rotateAndShow {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(180deg);
+    }
+  }
+  
+  /* Apply the animation to the image on hover */
+  /*.about .row .image img:hover {
+    animation: rotateAndShow 1s forwards; /* Run the animation when hovered and keep the final state 
+  }*/
+  
+  /* Define styles for the flipped image 
+  .about .row .image img.flipped {
+    transform: rotateY(180deg); /*Initially hide the flipped image 
+  }  */
+  /* Initially hide the second image */
+/* Initially hide the second image */
+/* Initially hide the second image */
+.about .row .image img:nth-child(2) {
+    display: none;
+}
+
+/* Show the second image on hover and hide the first */
+.about .row .image:hover img:nth-child(1) {
+    display: none;
+}
+.about .row .image:hover img:nth-child(2) {
+    display: block;
+}
+
+
+  
+  
+  .about .row .content {
+    flex: 1 1 45rem;
+    padding: 3rem;
+  }
+  .about .row .content h3 {
+    color: rgb(27, 27, 27);
+    font-size: 2.5rem;
+  }
+  .about .row .content .tag {
+    font-size: 5rem;
+    color: #020133;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+  .about .row .content p {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    font-weight: 800;
+    text-transform: none;
+  }
+  .about .row .content .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-weight: 600;
+  }
+  .about .row .content .box-container .box p {
+    text-transform: none;
+  }
+  .about .row .content .box-container .box p span {
+    color: #000000;
+  }
+  .resumebtn {
+    margin-top: 6rem;
+  }
+  .resumebtn .btn {
+    padding: 1.7rem 3rem;
+    border-radius: 0.5em;
+    transition: 0.3s;
+    color: #fff;
+    background: #420177;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0);
+  }
+  .resumebtn .btn span {
+    font-weight: 600;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+  }
+  .resumebtn .btn i {
+    margin-left: 0.3rem;
+    font-size: 1.2rem;
+    transition: 0.3s;
+  }
+  .resumebtn .btn:hover {
+    background: #000000;
+  }
+  .resumebtn .btn:hover i {
+    transform: translateX(5px);
+  }
+  /* about media queries starts*/
+  @media screen and (max-width: 600px) {
+    .about .row .image {
+        text-align: center;
+      margin-top: 2rem;
+    }
+    .about .row .image img {
+        display: inline-block;
+      margin: 0 auto;
+      width: 80%;
+      mix-blend-mode: normal;
+    }
+    .about .row {
+      padding: 0.5rem;
+      margin-bottom: 7rem;
+    }
+    .about .row .content {
+      padding: 1rem;
+    }
+    .about .row .content .box-container {
+      gap: 0;
+    }
+  }
